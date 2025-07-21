@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitioweb - GABO</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estiloservicios.css">
+    <link rel="stylesheet" href="menu.css">    
+</head>
+<body>
+  <img src="logo.png" width="500" height="500">
+    <div class="title">TRALALERITOS</div>
+    
+    <div class="menu-container" id="menuContainer">
+        <button class="center-button" onclick="toggleMenu()">Minecraft</button>
+        
+        <div class="menu-item">
+            <a href="#inicio">Valdez</a>
+        </div>
+        
+        <div class="menu-item">
+            <a href="#servicios">Gonzalez</a>
+        </div>
+        
+        <div class="menu-item">
+            <a href="#productos">Toño</a>
+        </div>
+        
+        <div class="menu-item">
+            <a href="#portfolio">Aguirre</a>
+        </div>
+        
+        <div class="menu-item">
+            <a href="#blog">carnesgalvis</a>
+        </div>
+        
+        <div class="menu-item">
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
 
+    <div class="subtitle">Los Tralaleritos siempre seran Tralaleros</div>
+
+    <script>
+        function toggleMenu() {
+            const menuContainer = document.getElementById('menuContainer');
+            const centerButton = document.querySelector('.center-button');
+            
+            menuContainer.classList.toggle('menu-active');
+            centerButton.classList.toggle('active');
+            
+            if (menuContainer.classList.contains('menu-active')) {
+                centerButton.textContent = '✕';
+            } else {
+                centerButton.textContent = 'Minecraft';
+            }
+        }
+
+        // Cerrar menú al hacer clic en un elemento
+        document.querySelectorAll('.menu-item a').forEach(item => {
+            item.addEventListener('click', () => {
+                toggleMenu();
+            });
+        });
+    </script>
+
+</body>
+</html>
